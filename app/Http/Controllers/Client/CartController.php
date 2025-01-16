@@ -75,7 +75,7 @@ class CartController extends Controller
                 }
 
                 $cartDetail->quantity = $newQuantity;
-                $cartDetail->total_amount += $priceMod * $quantity; // Sử dụng price đã tính toán
+                $cartDetail->total_amount += $priceMod * $quantity; 
                 $cartDetail->save();
             } else {
                 if ($matchingVariant->stock < $quantity) {
